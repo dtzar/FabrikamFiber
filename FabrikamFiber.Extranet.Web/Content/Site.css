@@ -1,0 +1,133 @@
+﻿html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var{font:inherit}del,ins{text-decoration:none}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:baseline}sub{vertical-align:baseline}legend{color:#000}
+
+body
+{
+    font-size: .85em;
+    font-family: "Trebuchet MS" , Verdana, Helvetica, Sans-Serif;
+    margin: 0 auto;
+    width: 900px;
+    padding: 0;
+    color: #696969;
+}
+
+strong { font-weight:bold; }
+
+header
+{
+    background-color: #515151;
+    color: #fff;
+    padding:10px;
+    height: 60px;
+}
+
+#logindisplay 
+{
+    font-size: 0.85em;
+    display: block;
+    text-align: right;
+}
+
+#logindisplay a:link 
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited 
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover 
+{
+    color: white;
+    text-decoration: none;
+}
+
+h1 { font-size:1.8em; }
+h2 { font-size:1.4em; }
+h3 { color:#515151; }
+
+div.maintenance
+{
+    background-color: #ffee83;
+    border: 1px solid #ffdc00;
+    padding: 7px;
+    color: #613f11;
+    margin-top:10px;
+}
+
+div.maintenance
+{ 
+    font-size: .9em;
+}
+
+div.dashboard { margin-top:10px; }
+
+div.dashboard h3 
+{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding:5px 0px;
+}
+
+div.dashboard div.ticket-list
+{
+    width: 240px;
+    height: 290px;
+    position: absolute;
+    background-color: #f5f5f5;
+    padding:5px;
+}
+
+div.dashboard div.ticket-list h3            { background-color: #CCC; padding-left:5px; }
+div.dashboard div.ticket-list table         { width: 100%; }
+div.dashboard div.ticket-list tr.selected   { background-color: #e7e7e7; }
+div.dashboard div.ticket-list td            { padding: 5px; font-size:.9em; }
+div.dashboard div.ticket-list td a          { width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display:block; }
+
+a, a:open, a:visited                        { color:#515151; text-decoration: none; cursor: pointer; }
+a:hover                                     { color:#515151; text-decoration: underline; cursor: pointer; }
+div.dashboard div.ticket-list td.icon       { width: 10px; text-align:center; font-size:1.1em; }
+
+div.dashboard div.ticket-detail
+{
+    width: 625px;
+    height: 290px;
+    margin-left: 260px;
+    float: left;
+    background-color: #fff;
+    padding:5px;
+}
+
+div.dashboard div.ticket-detail div.error
+{
+    height: 20px;
+    color: #D8000C;
+    background-color: #FFBABA;
+    border: 1px solid red;
+    padding: 0px 7px;
+    color: #613f11;
+    margin-top:0px;
+    padding:10px
+}
+
+.open { color: #f58a1c; }
+.closed { color: #26b74a; }
+
+div.dashboard div.ticket-detail div.detail  { clear:left; float:left; position: absolute; }
+div.dashboard div.map                       { width:400px; margin-left: 225px; }
+
+div.having-issues                   { margin-top: 20px; }
+
+div.having-issues h3                { background-color: #ccc; padding: 3px 10px; margin: 0px 0px 10px 0px; font-weight:bold; font-size: 1.2em; }
+div.having-issues h4                { font-size: 1.1em; font-weight:bold; color:#515151; }
+div.having-issues ul li             { padding:5px; margin:3px; cursor: pointer; } 
+div.having-issues ul li:hover       { background-color: #e7e7e7; } 
+div.detailed-issue                  { padding: 5px 10px; }
+div.detailed-issue p                { margin: 20px 0px;  }
+div.detailed-issue img              { margin-right: 5px; }
+
+footer                              { background-color: #fdfdfd; border: solid 1px #ccc; padding: 5px; margin-top:10px; font-size: .9em; text-align: right; }

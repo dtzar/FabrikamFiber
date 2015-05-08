@@ -1,0 +1,34 @@
+﻿{
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "websiteName": {
+            "value": null
+        },
+        "websiteHostingPlanName": {
+            "value": "Free"
+        },
+        "websiteLocation": {
+            "value": "West US"
+        },
+        "sqlServerName": {
+            "value": null
+        },
+        "sqlServerLocation": {
+            "value": "West US"
+        },
+        "sqlAdministratorLogin": {
+            "value": "AdminUser"
+        },
+        "sqlDatabaseName": {
+            "value": "FF"
+        },
+		"sqlAdministratorLoginPassword": {
+            "value": null
+        },
+        "sqlEdition": {
+            "value": "Web"
+        }
+		}
+    }
+}

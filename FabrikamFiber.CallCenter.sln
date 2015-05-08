@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.Web", "FabrikamFiber.Web\FabrikamFiber.Web.csproj", "{456D6BF0-21B0-4995-9D77-76FA13AD95DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.Extranet.Web", "FabrikamFiber.Extranet.Web\FabrikamFiber.Extranet.Web.csproj", "{A8E4732A-F2F0-4953-8946-46A1900F65A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.DAL", "FabrikamFiber.DAL\FabrikamFiber.DAL.csproj", "{64058BA2-30B8-4A35-8D4C-CB4F6D6D7442}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FEDE2F22-394F-4DC2-B8A2-F6DCCBBAD0BC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ACE35B26-6CD9-4A05-87DE-7A246420250F}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "FabrikamFiber.ARMDeployment", "FabrikamFiber.Deploy.Deployment\FabrikamFiber.ARMDeployment.deployproj", "{85D92714-CDA2-457D-B480-79FE40FBC5D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{456D6BF0-21B0-4995-9D77-76FA13AD95DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456D6BF0-21B0-4995-9D77-76FA13AD95DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456D6BF0-21B0-4995-9D77-76FA13AD95DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456D6BF0-21B0-4995-9D77-76FA13AD95DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E4732A-F2F0-4953-8946-46A1900F65A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E4732A-F2F0-4953-8946-46A1900F65A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E4732A-F2F0-4953-8946-46A1900F65A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E4732A-F2F0-4953-8946-46A1900F65A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64058BA2-30B8-4A35-8D4C-CB4F6D6D7442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64058BA2-30B8-4A35-8D4C-CB4F6D6D7442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64058BA2-30B8-4A35-8D4C-CB4F6D6D7442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64058BA2-30B8-4A35-8D4C-CB4F6D6D7442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85D92714-CDA2-457D-B480-79FE40FBC5D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85D92714-CDA2-457D-B480-79FE40FBC5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85D92714-CDA2-457D-B480-79FE40FBC5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85D92714-CDA2-457D-B480-79FE40FBC5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

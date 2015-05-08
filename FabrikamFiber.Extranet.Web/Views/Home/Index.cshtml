@@ -1,0 +1,176 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Fabrikam Fiber - Support";
+}
+<div class="maintenance">
+    <strong>Scheduled Maintenance</strong>: Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+<div class="dashboard">
+    <div class="ticket-list">
+        <h3>
+            My Tickets</h3>
+        <table border="0" cellpadding="0" cellspacing="0">
+            @foreach (var ticket in this.Model)
+            {
+                <tr>
+                    <td>
+                        <a rel="@ticket.ID" name="@string.Format("Ticket-A0141{0:d2}", ticket.ID)"><strong>[@string.Format("A0141{0:d2}", ticket.ID)]</strong>
+                            - @ticket.Title</a>
+                    </td>
+                    <td class="icon @ticket.Status.ToString().ToLower()">
+                        @if (ticket.Status.ToString().ToLower() != "closed")
+                        {
+                            <text>&diams;</text>
+                        }
+                        else
+                        {
+                            <text>&#10004;</text>
+                        }
+                    </td>
+                </tr>                
+            }
+        </table>
+    </div>
+    <div class="ticket-detail">
+        <div data-bind="template: { name: 'ticketTemplate' }" class="details">
+        </div>
+        <div class="error">
+            There was an error while retrieving data from the server</div>
+        <script id="ticketTemplate" type="text/html">
+            <h3>[<span class="${String.toLowerCase(status())}">${status}</span>] ${title}</h3>
+            <div class="detail">
+                {{if (opened) }}
+                    <strong>Created On:</strong><br/>
+                    ${ formatDate(opened()) }<br/><br/>
+                {{/if}}
+
+                <strong>Assigned To:</strong><br/>
+                ${ assignedTo }<br/><br/>
+            
+			    <!--
+                {{if (expectedVisitTime) }}
+                    <strong>Your tech will arrive:</strong> 
+                    ${ timeRange(expectedVisitTime()) }
+                    <br/>
+                {{/if}}
+				-->
+
+                {{if (isClosed) }}
+                    <strong>Resolution:</strong><br/>
+                    We replaced the whole connectivity bundle.
+                {{/if}}
+            </div>
+        </script>
+    </div>
+</div>
+<div style="clear: both;">
+</div>
+<div class="having-issues">
+    <h3>
+        Solution Center</h3>
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 200px; vertical-align: top;">
+                <ul class="items">
+                    <li>No Service</li>
+                    <li>Dead Channel</li>
+                    <li>Wrong Signal</li>
+                    <li>Other</li>
+                </ul>
+            </td>
+            <td>
+                <div class="detailed-issue">
+                    <h4>
+                        Welcome</h4>
+                    <img src="@Url.Content("~/Content/images/serviceman.jpg")" align="right" alt=""/>
+                    <p>
+                        Find Solutions to your technical problems in our Support Solution Center. To get
+                        started, click on the topics on the left.</p>
+                    <img src="@Url.Content("~/Content/images/flow.png")" />
+                    <p>
+                        Select a topic to see what assisted support options are available for your issue.
+                        This applies only to most common issues found by our customers. Select
+                        an issue from the list on the left or visit the alphabetized Online Assistance
+                        Index page.</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("div.ticket-list a").click(function () {
+            $("tr", $(this).closest('table')).removeClass('selected');
+            $(this).closest('tr').addClass('selected');
+
+            var url = '@Url.Action("GetServiceTicket", "ServiceTickets")';
+            var id = $(this).attr("rel");
+
+            jQuery.ajax({ type: "GET",
+                url: url + "?ticketId=" + id,
+                success: function (result) {
+                    viewModel = ko.mapping.fromJS(result);
+                    ko.applyBindings(viewModel);
+                    $("div.details").show();
+                    $("div.error").hide();
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    $("div.details").hide();
+                    $("div.error").show();
+                }
+            });
+        });
+
+        $("div.ticket-list a").first().click();
+    });
+
+    function formatDate(datetime) {
+        var dateString = datetime.replace(/[^+0-9]*/img, "");
+        var dateObj = new Date(parseInt(dateString, 10));
+
+        var curr_date = dateObj.getDate();
+        var curr_month = dateObj.getMonth();
+        var curr_year = dateObj.getFullYear();
+        var curr_hour = dateObj.getHours();
+        var curr_min = dateObj.getMinutes();
+        var curr_sec = dateObj.getSeconds();
+        var returnValue = (parseInt(curr_month, 10) + 1) + "/" + curr_date + "/" + curr_year + " " + (curr_hour % 12 || 12) + ":" + padDigits(curr_min, 2) + (curr_hour < 12 ? " AM" : " PM");
+
+        return returnValue;
+    }
+
+    function timeRange(datetime) {
+        var dateString = datetime.replace(/[^+0-9]*/img, "");
+        var dateObj = new Date(parseInt(dateString, 10));
+        
+        var maxDate = new Date(parseInt(dateString, 10));
+        maxDate.addMinutes(30);
+
+        var minHour = (dateObj.getHours() % 12 || 12) + ":" + padDigits(dateObj.getMinutes(), 2) + (dateObj.getHours() < 12 ? " AM" : " PM");
+        var maxHour = (maxDate.getHours() % 12 || 12) + ":" + padDigits(maxDate.getMinutes(), 2) + (maxDate.getHours() < 12 ? " AM" : " PM");
+
+        return (parseInt(dateObj.getMonth(), 10) + 1) + "/" + dateObj.getDay() + "/" + dateObj.getFullYear() + "  between " + minHour + " and " + maxHour; 
+    }
+
+    Date.prototype.addHours = function (h) {
+        this.setHours(this.getHours() + h);
+        return this;
+    }
+
+    Date.prototype.addMinutes = function (m) {
+        this.setMinutes(this.getMinutes() + m);
+        return this;
+    }
+
+    function padDigits(n, totalDigits) {
+        n = n.toString();
+        var pd = '';
+        if (totalDigits > n.length) {
+            for (i = 0; i < (totalDigits - n.length); i++) {
+                pd += '0';
+            }
+        }
+        return pd + n.toString();
+    }
+</script>

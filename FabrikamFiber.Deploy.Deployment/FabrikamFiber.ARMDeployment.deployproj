@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <DeploymentProjectTargetsPath>$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v12.0\Deployment\0.6\DeploymentProject.targets</DeploymentProjectTargetsPath>
+    <DeploymentTargetsPath>Deployment.targets</DeploymentTargetsPath>
+    <ProjectGuid>85d92714-cda2-457d-b480-79fe40fbc5d0</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Condition=" Exists($(DeploymentTargetsPath)) " Project="$(DeploymentTargetsPath)" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Import Condition=" Exists('$(DeploymentProjectTargetsPath)') " Project="$(DeploymentProjectTargetsPath)" />
+  <ItemGroup>
+    <None Include="$(DeploymentTargetsPath)">
+      <Visible>False</Visible>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Publish-AzureResourceGroup.ps1" />
+    <Content Include="Templates\WebSiteSQLDatabase.json" />
+    <Content Include="Templates\WebSiteSQLDatabase.param.dev.json" />
+  </ItemGroup>
+</Project>

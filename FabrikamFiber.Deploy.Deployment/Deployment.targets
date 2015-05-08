@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <SkipCopyBuildProduct>true</SkipCopyBuildProduct>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+  </PropertyGroup>
+  
+  <ItemDefinitionGroup>
+    <Content>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemDefinitionGroup>
+
+  <Target Name="CreateManifestResourceNames" />
+  <Target Name="CoreCompile" />
+
+</Project>
