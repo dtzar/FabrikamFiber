@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
-    <DeploymentProjectTargetsPath>$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v12.0\Deployment\0.6\DeploymentProject.targets</DeploymentProjectTargetsPath>
+    <DeploymentProjectTargetsPath>$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v12.0\Deployment\1.0\DeploymentProject.targets</DeploymentProjectTargetsPath>
     <DeploymentTargetsPath>Deployment.targets</DeploymentTargetsPath>
     <ProjectGuid>85d92714-cda2-457d-b480-79fe40fbc5d0</ProjectGuid>
   </PropertyGroup>
