@@ -1,0 +1,30 @@
+﻿{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "siteName": {
+            "value": "fabrikamfiber07-03"
+        },
+        "hostingPlanName": {
+            "value": "freehosting"
+        },
+        "siteLocation": {
+            "value": "West US"
+        },
+        "serverName": {
+            "value": "fabrikamsqlserver0703"
+        },
+        "serverLocation": {
+            "value": "West US"
+        },
+        "administratorLogin": {
+            "value": "dave"
+        },
+        "databaseName": {
+            "value": "FabrikamFiber-Express"
+        },
+        "administratorLoginPassword": {
+            "value": "Passw0rd!"
+        }
+    }
+}

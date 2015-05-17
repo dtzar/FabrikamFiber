@@ -1,0 +1,34 @@
+﻿{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "websiteName": {
+            "value": "fabrikamfiber0704"
+        },
+        "hostingPlanName": {
+            "value": "freehosting4"
+        },
+        "siteLocation": {
+            "value": "West US"
+        },
+        "serverName": {
+            "value": "fabrikamsqlserver0704"
+        },
+        "serverLocation": {
+            "value": "West US"
+        },
+        "administratorLogin": {
+            "value": "dave"
+        },
+        "databaseName": {
+            "value": "ff"
+        },
+        "webDeployPackageURI": {
+	        "type": "string",
+            "value": "https://devopsdemos.blob.core.windows.net/webdeploypackages/FabrikamFiber.WebDeploy.Package.zip"
+	    },
+        "administratorLoginPassword": {
+            "value": "Passw0rd!"
+        }
+    }
+}
