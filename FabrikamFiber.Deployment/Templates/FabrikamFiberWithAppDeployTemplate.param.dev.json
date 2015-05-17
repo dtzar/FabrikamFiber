@@ -3,32 +3,32 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "websiteName": {
-            "value": "fabrikamfiber0704"
+            "value": ""
         },
         "hostingPlanName": {
-            "value": "freehosting4"
+            "value": "FreeHostPlan"
         },
         "siteLocation": {
-            "value": "West US"
+            "value": ""
         },
         "serverName": {
-            "value": "fabrikamsqlserver0704"
+            "value": ""
         },
         "serverLocation": {
-            "value": "West US"
+            "value": ""
         },
         "administratorLogin": {
-            "value": "dave"
+            "value": ""
         },
         "databaseName": {
-            "value": "ff"
+            "value": "Fabrikam-Express"
         },
         "webDeployPackageURI": {
 	        "type": "string",
-            "value": "https://devopsdemos.blob.core.windows.net/webdeploypackages/FabrikamFiber.WebDeploy.Package.zip"
+            "value": "https://youraccountname.blob.core.windows.net/webdeploypackages/FabrikamFiber.WebDeploy.Package.zip"
 	    },
         "administratorLoginPassword": {
-            "value": "Passw0rd!"
+            "value": ""
         }
     }
 }

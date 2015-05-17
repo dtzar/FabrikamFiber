@@ -3,28 +3,28 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "siteName": {
-            "value": "fabrikamfiber07-03"
+            "value": ""
         },
         "hostingPlanName": {
-            "value": "freehosting"
+            "value": "FreeHostPlan"
         },
         "siteLocation": {
-            "value": "West US"
+            "value": ""
         },
         "serverName": {
-            "value": "fabrikamsqlserver0703"
+            "value": ""
         },
         "serverLocation": {
-            "value": "West US"
+            "value": ""
         },
         "administratorLogin": {
-            "value": "dave"
+            "value": ""
         },
         "databaseName": {
             "value": "FabrikamFiber-Express"
         },
         "administratorLoginPassword": {
-            "value": "Passw0rd!"
+            "value": ""
         }
     }
 }
